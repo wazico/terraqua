@@ -1,0 +1,126 @@
+.header {
+  position: relative;
+  z-index: 10;
+  padding: 20px 40px;
+  background: rgba(10, 15, 10, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.header-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #D4AF37;
+  letter-spacing: 2px;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.brand-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.subtitle-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #D4AF37;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.brand-subtitle .line {
+  width: 20px;
+  height: 1px;
+  background: #D4AF37;
+}
+
+.header-nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #D4AF37;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #D4AF37;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 15px 20px;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .header-nav {
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .nav-link {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .brand-name {
+    font-size: 22px;
+  }
+}

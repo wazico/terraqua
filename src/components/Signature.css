@@ -1,0 +1,83 @@
+.signature {
+  position: relative;
+  z-index: 1;
+  padding: 100px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.signature-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.signature-title {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #D4AF37;
+  text-align: center;
+  margin: 0;
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.signature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.signature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 20px;
+  background: rgba(20, 30, 20, 0.4);
+  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: all 0.3s ease;
+}
+
+.signature-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(212, 175, 55, 0.5);
+  background: rgba(20, 30, 20, 0.6);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.signature-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.3));
+}
+
+.signature-item-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+}
+
+.signature-item-description {
+  font-size: 14px;
+  color: #cccccc;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .signature {
+    padding: 60px 20px;
+  }
+  
+  .signature-title {
+    font-size: 36px;
+  }
+  
+  .signature-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}

@@ -1,0 +1,141 @@
+.featured-products {
+  position: relative;
+  z-index: 1;
+  padding: 100px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.featured-products-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.featured-products-title {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #D4AF37;
+  text-align: center;
+  margin: 0;
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.featured-products-subtitle {
+  font-size: 18px;
+  color: #cccccc;
+  text-align: center;
+  max-width: 800px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.quote-form {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #D4AF37;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-select {
+  padding: 15px 20px;
+  background: rgba(20, 30, 20, 0.6);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23D4AF37' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  padding-right: 45px;
+}
+
+.form-select:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: #D4AF37;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.form-select option {
+  background: #1a2a1a;
+  color: #ffffff;
+}
+
+.quote-button {
+  padding: 18px 50px;
+  background: #D4AF37;
+  border: none;
+  color: #0a0f0a;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  align-self: center;
+  min-width: 300px;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.quote-button:hover {
+  background: #E5C158;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+  transform: translateY(-2px);
+}
+
+.quote-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .featured-products {
+    padding: 60px 20px;
+  }
+  
+  .featured-products-title {
+    font-size: 36px;
+  }
+  
+  .featured-products-subtitle {
+    font-size: 16px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .quote-button {
+    min-width: 100%;
+    padding: 15px 30px;
+  }
+}
